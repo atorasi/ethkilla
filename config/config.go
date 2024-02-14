@@ -8,7 +8,6 @@ import (
 )
 
 type UserConfig struct {
-	UseProxy            bool     `yaml:"use_proxy"`
 	RetryTimes          int      `yaml:"retry_times"`
 	MaxGwei             int      `yaml:"max_gwei"`
 	NeedDelayAct        bool     `yaml:"need_delay_act"`
