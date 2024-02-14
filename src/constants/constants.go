@@ -4,7 +4,7 @@ import (
 	"ethkilla/config"
 )
 
-var SETTINGS = config.ReadSettings(`D:\fxckhands\glang\ethkilla\config.yaml`)
+var SETTINGS = config.ReadSettings(`..\config.yaml`)
 
 var CHAINS = map[string]map[string]string{
 	"ETHEREUM": {
