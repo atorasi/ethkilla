@@ -16,6 +16,9 @@ import (
 func main() {
 	clearTerminal()
 	fmt.Printf("%s\n\n", constants.LOGO)
+	log.Println("t.me/tripleshizu t.me/tripleshizu t.me/tripleshizu t.me/tripleshizu")
+	log.Println("Donate - 0x4163dfa9eE4A25e950ce1a0A2221FafA29fe2df6 - Any EVM")
+	
 	walletSlice, err := account.SliceOfAccs()
 	if err != nil {
 		log.Fatal(err)
@@ -41,6 +44,9 @@ func main() {
 
 		}
 	}
+	log.Println("t.me/tripleshizu t.me/tripleshizu t.me/tripleshizu t.me/tripleshizu")
+	log.Println("Donate - 0x4163dfa9eE4A25e950ce1a0A2221FafA29fe2df6 - Any EVM")
+	
 	log.Println("The software has shut down. Press Enter to exit.")
 	fmt.Scanln()
 }
