@@ -1,0 +1,45 @@
+# [ GENERAL ]
+use_proxy: False                  # Использовать прокси? true/false Да/Нет
+retry_times: 1                    # Сколько раз пытаться выполнить модуль, если возникла ошибка | Минимум - 1
+
+max_gwei: 100                     # Максимальный гвей, которого будет ждать софт.
+# [ DELAYS ]
+need_delay_act: true              # Нужна задержка между активностями? true/false Да/Нет
+delay_act_min: 10                 # Мин. задержка - целые числа.
+delay_act_max: 15                 # Макс. задержка - целые числа.
+
+need_delay_acc: true              # Нужна задержка между акками? true/false Да/Нет
+delay_acc_min: 10                 # Мин. задержка - целые числа.
+delay_acc_max: 15                 # Макс. задержка - целые числа.
+
+
+# [ TELEGRAM ]
+telegram_alerts: true             # Использовать телеграм уведомления? true/false Да/Нет
+bot_token: ""                     # Токен телеграм бота. Получить в @botfather. После того как создадите бота, напишите ему /start.
+chat_id: 680906123                # Ваш id телеграм. Получать в @myidbot командой -> "/getid"
+
+# [ BLOCKCHAIN DATA ]
+need_non_eth: false               # Нужны ли транзакции не только в мейннете (Relay)? true/false
+side_chain: "BASE"                # Сеть, в которую делать депозит с OKX и Relay Bridge [ BASE | ZKSYNC]
+
+# [ OKX SETTINGS]
+okx_value_min: 0.002              # Мин. значение эфира вывода с OKX
+okx_value_max: 0.003              # Макс. значение эфира вывода с OKX
+oxk_apiKey: ""                    # 
+oxk_secret: ""                    #
+oxk_password: ""                  #
+
+# [ RELAY SETTINGS]
+relay_percent_min: 80             # Мин. процент нативного баланса для взаимодействия с Relay
+relay_percent_max: 90             # Макс. процент нативного баланса для взаимодействия с Relay
+
+# [ BUNGEE SETTINGS ]
+bungee_times: 1 
+bungee_value_min: 0.0001          # Мин. значение эфира для bungee refuel
+bungee_value_max: 0.0002          # Макс. значение эфира для bungee refuel
+refuel_to: ["POLYGON", "GNOSIS"]  # Сети для bungee refuel ("POLYGON", "GNOSIS")
+
+# [ SELF TRANS SETTINGS]
+self_tran_times: 1
+self_trans_percent_min: 60        # Мин. процент нативного баланса для перевода себе
+self_trans_percent_max: 80        # Макс. процент нативного баланса для перевода себе
