@@ -7,7 +7,7 @@ import (
 )
 
 func SliceOfAccs() ([]Wallet, error) {
-	keys, err := utils.ReadFile(`D:\fxckhands\glang\berachain\data\pKeys.txt`)
+	keys, err := utils.ReadFile(`..\data\pKeys.txt`)
 	if err != nil {
 		return nil, err
 	}
