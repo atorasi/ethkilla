@@ -5,9 +5,9 @@ software that puts cheap nonsense on the airwaves.
 
 How to use:
 
->> - download Golang https://go.dev/doc/install
+- download Golang https://go.dev/doc/install
 
->> fill okx, delay and etc settings in config.yaml
+> fill okx, delay and etc settings in config.yaml
 
 console commands:
 
