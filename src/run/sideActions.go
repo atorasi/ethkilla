@@ -13,7 +13,8 @@ import (
 
 func SideActions(index int, wallet account.Wallet) (string, error) {
 	sideChain := constants.SETTINGS.SideChain
-	sideChainClient, err := ethclient.Dial(constants.CHAINS["ETHEREUM"]["RPC"])
+
+	sideChainClient, err := ethclient.Dial(constants.CHAINS[constants.SETTINGS.SideChain]["RPC"])
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -21,7 +22,7 @@ func SideActions(index int, wallet account.Wallet) (string, error) {
 
 	var module string
 	if constants.SETTINGS.NeedOkx {
-		module, err = okxWithdrawal(index, sideChain, sideChainClient, wallet)
+		module, err := okxWithdrawal(index, sideChain, sideChainClient, wallet)
 		if err != nil {
 			return module, err
 		}
@@ -31,8 +32,8 @@ func SideActions(index int, wallet account.Wallet) (string, error) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	defer sideChainClient.Close()
-	module, err = relayDeposit(index, sideChain, ethereumChainClient, wallet)
+	defer ethereumChainClient.Close()
+	module, err = relayDeposit(index, sideChain, sideChainClient, ethereumChainClient, wallet)
 	if err != nil {
 		return module, err
 	}
@@ -66,8 +67,8 @@ func okxWithdrawal(index int, sideChain string, client *ethclient.Client, wallet
 	return "", nil
 }
 
-func relayDeposit(index int, sideChain string, client *ethclient.Client, wallet account.Wallet) (string, error) {
-	balanceEthStart, err := account.Account.NativeBalance(account.Account{}, client, wallet)
+func relayDeposit(index int, sideChain string, client, ethclient *ethclient.Client, wallet account.Wallet) (string, error) {
+	balanceEthStart, err := account.Account.NativeBalance(account.Account{}, ethclient, wallet)
 	if err != nil {
 		return "Get balance", err
 	}
@@ -79,7 +80,7 @@ func relayDeposit(index int, sideChain string, client *ethclient.Client, wallet 
 	}
 
 	for newBalance := balanceEthStart; newBalance == balanceEthStart; {
-		newBalance, err = account.Account.NativeBalance(account.Account{}, client, wallet)
+		newBalance, err = account.Account.NativeBalance(account.Account{}, ethclient, wallet)
 		if err != nil {
 			return "Get balance", err
 		}

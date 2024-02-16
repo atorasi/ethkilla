@@ -14,16 +14,17 @@ delay_acc_max: 15                 # Макс. задержка - целые чи
 
 
 # [ TELEGRAM ]
-telegram_alerts: true             # Использовать телеграм уведомления? true/false Да/Нет
+telegram_alerts: false             # Использовать телеграм уведомления? true/false Да/Нет
 bot_token: ""                     # Токен телеграм бота. Получить в @botfather. После того как создадите бота, напишите ему /start.
 chat_id: 680906123                # Ваш id телеграм. Получать в @myidbot командой -> "/getid"
 
 # [ BLOCKCHAIN DATA ]
-need_non_eth: false               # Нужны ли транзакции не только в мейннете (Relay)? true/false
+need_non_eth: true               # Нужны ли транзакции не только в мейннете (Relay)? true/false
 side_chain: "BASE"                # Сеть, в которую делать депозит с OKX и Relay Bridge [ BASE | ZKSYNC]
 
 # [ OKX SETTINGS]
-need_okx: true
+need_okx: false                   # Выводить средства с OKX
+
 okx_value_min: 0.002              # Мин. значение эфира вывода с OKX
 okx_value_max: 0.003              # Макс. значение эфира вывода с OKX
 oxk_apiKey: ""                    # 
@@ -31,11 +32,11 @@ oxk_secret: ""                    #
 oxk_password: ""                  #
 
 # [ RELAY SETTINGS]
-relay_percent_min: 80             # Мин. процент нативного баланса для взаимодействия с Relay
-relay_percent_max: 90             # Макс. процент нативного баланса для взаимодействия с Relay
+relay_percent_min: 30             # Мин. процент нативного баланса для взаимодействия с Relay
+relay_percent_max: 50             # Макс. процент нативного баланса для взаимодействия с Relay
 
 # [ BUNGEE SETTINGS ]
-bungee_times: 1 
+bungee_times: 1
 bungee_value_min: 0.0001          # Мин. значение эфира для bungee refuel
 bungee_value_max: 0.0002          # Макс. значение эфира для bungee refuel
 refuel_to: ["POLYGON", "GNOSIS"]  # Сети для bungee refuel ("POLYGON", "GNOSIS")

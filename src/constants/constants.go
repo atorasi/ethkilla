@@ -15,7 +15,7 @@ var CHAINS = map[string]map[string]string{
 		"SCAN":           "https://etherscan.io/",
 	},
 	"BASE": {
-		"RPC":            "https://endpoints.omniatech.io/v1/base/mainnet/public",
+		"RPC":            "https://base-pokt.nodies.app",
 		"CHAIN_ID":       "8453",
 		"CURRENCY":       "ETH",
 		"OKX_CHAIN":      "ETH-Base",
