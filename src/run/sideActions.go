@@ -19,9 +19,12 @@ func SideActions(index int, wallet account.Wallet) (string, error) {
 	}
 	defer sideChainClient.Close()
 
-	module, err := okxWithdrawal(index, sideChain, sideChainClient, wallet)
-	if err != nil {
-		return module, err
+	var module string
+	if constants.SETTINGS.NeedOkx {
+		module, err = okxWithdrawal(index, sideChain, sideChainClient, wallet)
+		if err != nil {
+			return module, err
+		}
 	}
 
 	ethereumChainClient, err := ethclient.Dial(constants.CHAINS["ETHEREUM"]["RPC"])

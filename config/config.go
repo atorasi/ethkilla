@@ -8,6 +8,7 @@ import (
 )
 
 type UserConfig struct {
+	UseProxy            bool     `yaml:"use_proxy"`
 	RetryTimes          int      `yaml:"retry_times"`
 	MaxGwei             int      `yaml:"max_gwei"`
 	NeedDelayAct        bool     `yaml:"need_delay_act"`
@@ -21,6 +22,7 @@ type UserConfig struct {
 	ChatID              int      `yaml:"chat_id"`
 	NeedNonEth          bool     `yaml:"need_non_eth"`
 	SideChain           string   `yaml:"side_chain"`
+	NeedOkx             bool     `yaml:"need_okx"`
 	OkxValueMin         float64  `yaml:"okx_value_min"`
 	OkxValueMax         float64  `yaml:"okx_value_max"`
 	OxkAPIKey           string   `yaml:"oxk_apiKey"`

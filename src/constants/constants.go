@@ -46,6 +46,13 @@ var CHAINS = map[string]map[string]string{
 		"WITHDRAWAL_FEE": "0.0001",
 		"SCAN":           "https://arbiscan.io/",
 	},
+	"ZORA": {
+		"RPC":            "https://rpc.zora.energy",
+		"CHAIN_ID":       "7777777",
+		"CURRENCY":       "ETH",
+		"BUNGEECONTRACT": "",
+		"SCAN":           "https://explorer.zora.energy/",
+	},
 	"POLYGON": {
 		"RPC":            "",
 		"CHAIN_ID":       "137",
