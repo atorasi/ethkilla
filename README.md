@@ -1,5 +1,4 @@
 #ethkilla
-
 software that puts cheap nonsense on the airwaves. 
 
 
@@ -573,64 +572,9 @@ https://www.youtube.com/watch?v=ccdHspHSJQ8
 https://www.youtube.com/watch?v=ccdHspHSJQ8
 https://www.youtube.com/watch?v=ccdHspHSJQ8
 https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
-https://www.youtube.com/watch?v=ccdHspHSJQ8
+
+
+@@ -634,259 +65,4 @@ https://www.youtube.com/watch?v=ccdHspHSJQ8
 https://www.youtube.com/watch?v=ccdHspHSJQ8
 https://www.youtube.com/watch?v=ccdHspHSJQ8
 https://www.youtube.com/watch?v=ccdHspHSJQ8
@@ -890,3 +834,4 @@ https://www.youtube.com/watch?v=ccdHspHSJQ8
 https://www.youtube.com/watch?v=ccdHspHSJQ8
 
 
+https://www.youtube.com/watch?v=ccdHspHSJQ8

@@ -1,4 +1,5 @@
 # [ GENERAL ]
+use_proxy: False                  # Использовать прокси? true/false Да/Нет
 retry_times: 1                    # Сколько раз пытаться выполнить модуль, если возникла ошибка | Минимум - 1
 
 max_gwei: 100                     # Максимальный гвей, которого будет ждать софт.
@@ -22,6 +23,7 @@ need_non_eth: false               # Нужны ли транзакции не т
 side_chain: "BASE"                # Сеть, в которую делать депозит с OKX и Relay Bridge [ BASE | ZKSYNC]
 
 # [ OKX SETTINGS]
+need_okx: true
 okx_value_min: 0.002              # Мин. значение эфира вывода с OKX
 okx_value_max: 0.003              # Макс. значение эфира вывода с OKX
 oxk_apiKey: ""                    # 
