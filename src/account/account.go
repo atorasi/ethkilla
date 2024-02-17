@@ -143,6 +143,10 @@ func (acc Account) EstimateFees(client *ethclient.Client, message ethereum.CallM
 	if limitErr != nil {
 		return gasPrice, 0, err
 	}
+
+	gasPrice.Mul(gasPrice, big.NewInt(11))
+	gasPrice.Div(gasPrice, big.NewInt(10))
+
 	return gasPrice, uint64(float64(gasLimit) * 1.54), nil
 }
 
