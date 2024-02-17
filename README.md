@@ -22,6 +22,14 @@ if you want to compile code
 
 mne vashe pohui.
 
+# Media
+telegram - t.me/tripleshizu
+
+> Если есть советы по коду напишите в лс @qqrwo - tg. Спасибо.
+
+# Пока
+
+
 
 https://www.youtube.com/watch?v=ccdHspHSJQ8
 https://www.youtube.com/watch?v=ccdHspHSJQ8
