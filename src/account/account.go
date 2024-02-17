@@ -143,7 +143,7 @@ func (acc Account) EstimateFees(client *ethclient.Client, message ethereum.CallM
 	if limitErr != nil {
 		return gasPrice, 0, err
 	}
-	return gasPrice, uint64(float64(gasLimit) * 1.3), nil
+	return gasPrice, uint64(float64(gasLimit) * 1.54), nil
 }
 
 func (acc Account) RandomValue(value *big.Int, min, max int) *big.Int {
