@@ -43,10 +43,14 @@ func okxWithdrawal(index int, sideChain string, client *ethclient.Client, wallet
 	}
 	log.Printf("Acc.%d | Succesfully withdrew from OKX, waiting for funds", index)
 
-	for newBalance := balanceSideStart; newBalance == balanceSideStart; {
-		newBalance, err = account.Account.NativeBalance(account.Account{}, client, wallet)
+	for {
+		newBalance, err := account.Account.NativeBalance(account.Account{}, client, wallet)
 		if err != nil {
 			return "Get balance", err
+		}
+		if newBalance != balanceSideStart {
+			log.Printf("Acc.%d | Funds deposited", index)
+			break
 		}
 		time.Sleep(time.Duration(30) * time.Second)
 		log.Printf("Acc.%d | Didnt get funds yet, sleep 30 seconds.", index)
