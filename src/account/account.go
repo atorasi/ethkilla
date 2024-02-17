@@ -54,7 +54,7 @@ func (acc Account) SendTransaction(
 		return nil, err
 	}
 
-	ctx, cancel := context.WithTimeout(context.Background(), time.Duration(30)*time.Second)
+	ctx, cancel := context.WithTimeout(context.Background(), time.Duration(60)*time.Second)
 	defer cancel()
 
 	err = client.SendTransaction(ctx, signedTx)
