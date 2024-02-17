@@ -11,29 +11,18 @@ import (
 	"github.com/ethereum/go-ethereum/ethclient"
 )
 
-func SideActions(index int, wallet account.Wallet) (string, error) {
+func SideActions(index int, wallet account.Wallet, client, ethClient *ethclient.Client) (string, error) {
 	sideChain := constants.SETTINGS.SideChain
-
-	sideChainClient, err := ethclient.Dial(constants.CHAINS[constants.SETTINGS.SideChain]["RPC"])
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer sideChainClient.Close()
 
 	var module string
 	if constants.SETTINGS.NeedOkx {
-		module, err := okxWithdrawal(index, sideChain, sideChainClient, wallet)
+		module, err := okxWithdrawal(index, sideChain, client, wallet)
 		if err != nil {
 			return module, err
 		}
 	}
 
-	ethereumChainClient, err := ethclient.Dial(constants.CHAINS["ETHEREUM"]["RPC"])
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer ethereumChainClient.Close()
-	module, err = relayDeposit(index, sideChain, sideChainClient, ethereumChainClient, wallet)
+	module, err := relayDeposit(index, sideChain, client, ethClient, wallet)
 	if err != nil {
 		return module, err
 	}

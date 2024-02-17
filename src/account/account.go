@@ -26,7 +26,7 @@ func (acc Account) SendTransaction(
 	calldata []byte,
 	value *big.Int,
 	chainName string,
-) (*types.Receipt, error) {
+) (txHash *types.Receipt, err error) {
 	log.Printf("Acc.%d | Building transaction", wallet.Index)
 	message := ethereum.CallMsg{
 		From:  wallet.PublicKey,
@@ -60,7 +60,7 @@ func (acc Account) SendTransaction(
 	if err != nil {
 		return nil, err
 	}
-	txHash, err := acc.waitReciept(client, signedTx)
+	txHash, err = acc.waitReciept(client, signedTx)
 
 	log.Printf("Acc.%d | Transaction Hash: %s/tx/%v", wallet.Index, constants.CHAINS[chainName]["SCAN"], txHash.TxHash)
 	utils.SendTelegramMessage("Acc.%d | Transaction Hash: %s/tx/%v", wallet.Index, constants.CHAINS[chainName]["SCAN"], txHash.TxHash)
@@ -79,7 +79,6 @@ func (acc Account) Approve(
 	approveFor common.Address, chainName string,
 ) (*types.Receipt, error) {
 	contractAbi, _ := acc.ReadAbi(constants.USDC_ABI)
-
 	valueToApprove, _ := acc.TokenBalance(client, wallet, token)
 
 	calldata, err := contractAbi.Pack("approve", approveFor, valueToApprove)

@@ -1,5 +1,5 @@
 # [ GENERAL ]
-use_proxy: False                  # Использовать прокси? true/false Да/Нет
+use_proxy: true                  # Использовать прокси? true/false Да/Нет
 retry_times: 1                    # Сколько раз пытаться выполнить модуль, если возникла ошибка | Минимум - 1
 
 max_gwei: 100                     # Максимальный гвей, которого будет ждать софт.
@@ -20,7 +20,7 @@ chat_id: 680906123                # Ваш id телеграм. Получать
 
 # [ BLOCKCHAIN DATA ]
 need_non_eth: true               # Нужны ли транзакции не только в мейннете (Relay)? true/false
-side_chain: "BASE"                # Сеть, в которую делать депозит с OKX и Relay Bridge [ BASE | ZKSYNC]
+side_chain: "ZORA"                # Сеть, в которую делать депозит с OKX и Relay Bridge [ BASE | ZKSYNC]
 
 # [ OKX SETTINGS]
 need_okx: false                   # Выводить средства с OKX
@@ -36,12 +36,12 @@ relay_percent_min: 30             # Мин. процент нативного б
 relay_percent_max: 50             # Макс. процент нативного баланса для взаимодействия с Relay
 
 # [ BUNGEE SETTINGS ]
-bungee_times: 1
+bungee_times: 0
 bungee_value_min: 0.0001          # Мин. значение эфира для bungee refuel
 bungee_value_max: 0.0002          # Макс. значение эфира для bungee refuel
 refuel_to: ["POLYGON", "GNOSIS"]  # Сети для bungee refuel ("POLYGON", "GNOSIS")
 
 # [ SELF TRANS SETTINGS]
-self_tran_times: 1
+self_tran_times: 0
 self_trans_percent_min: 60        # Мин. процент нативного баланса для перевода себе
 self_trans_percent_max: 80        # Макс. процент нативного баланса для перевода себе

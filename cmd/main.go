@@ -11,6 +11,7 @@ import (
 	"ethkilla/src/account"
 	"ethkilla/src/constants"
 	"ethkilla/src/run"
+	"ethkilla/utils"
 )
 
 func main() {
@@ -24,16 +25,34 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	for _, wallet := range walletSlice {
+	proxyList, err := utils.ReadFile(`..\data\proxy.txt`)
+	if err != nil {
+		log.Fatal(err)
+	}
+	for index, wallet := range walletSlice {
+		sideClient, err := account.NewClient(index, proxyList, constants.SETTINGS.SideChain)
+		if err != nil {
+			log.Printf("An error with RPC connection with %s, check your node %s",
+				constants.SETTINGS.SideChain, err)
+		}
+		defer sideClient.Close()
+
+		ethClient, err := account.NewClient(index, proxyList, "ETHEREUM")
+		if err != nil {
+			log.Printf("An error with RPC connection with %s, check your node %s",
+				"ETHEREUM", err)
+		}
+		defer ethClient.Close()
+
 		if constants.SETTINGS.NeedNonEth {
-			module, err := run.SideActions(wallet.Index, wallet)
+			module, err := run.SideActions(wallet.Index, wallet, sideClient, ethClient)
 			if err != nil {
 				log.Printf("Acc.%d | An error was occured with %s: %v", wallet.Index, module, err)
 			}
 		}
 		modules := run.ModulesList()
 		for _, module := range modules {
-			if _, err := run.EtherActions(wallet.Index, wallet, module); err != nil {
+			if _, err := run.EtherActions(wallet.Index, wallet, module, ethClient); err != nil {
 				log.Printf("Acc.%d | An error was occured with %s: %v", wallet.Index, module, err)
 			}
 		}

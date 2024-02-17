@@ -8,7 +8,7 @@ var SETTINGS = config.ReadSettings(`..\config.yaml`)
 
 var CHAINS = map[string]map[string]string{
 	"ETHEREUM": {
-		"RPC":            "https://cloudflare-eth.com",
+		"RPC":            "https://eth.llamarpc.com",
 		"CHAIN_ID":       "1",
 		"CURRENCY":       "ETH",
 		"BUNGEECONTRACT": "0xb584D4bE1A5470CA1a8778E9B86c81e165204599",
